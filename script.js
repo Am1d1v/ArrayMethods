@@ -24,7 +24,13 @@ console.log(slicedLetters);
 
 */
 
-const letters = ['a', 'b', 'c', 'd', 'e'];
+//const letters = ['a', 'b', 'c', 'd', 'e'];
 //console.log(letters.splice(1, 3));
 console.log(letters.splice(-1));
+console.log(letters);
+
+
+const letters = ['a', 'b', 'c', 'd', 'e'];
+//console.log(letters);
+console.log(letters.reverse());
 console.log(letters);
