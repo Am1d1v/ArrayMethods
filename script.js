@@ -7,7 +7,7 @@ const currencies = new Map (
     ["CNY", 'Chinese yuan']
 );
 
-const transactions = [300, 250, 5000, 1500, -1000, 200];
+//const transactions = [300, 250, 5000, 1500, -1000, 200];
 
 /*
 
@@ -45,3 +45,27 @@ const letters2 = ['f', 'g', 'y', 'q', 'w'];
 const concatedLetters = letters1.concat(letters2);
 console.log(concatedLetters);
 console.log(letters1);
+
+//===============================================================================================================================
+//const transactions = [300, 250, 5000, 1500, -1000, 200, -800];
+
+for (let transaction of transactions){
+    if(transaction > 0) {
+        console.log(`Вы пополнили счёт на ${transaction} eur`);
+    } else {
+       // console.log(`С вашего счёта списано ${transaction} eur`);
+        console.log(`С вашего счёта списано ${Math.abs(transaction)} eur`);
+    }
+}
+
+const transactions = [300, 250, 5000, 1500, -1000, 200, -800];
+
+transactions.forEach((transaction, index, array) => {
+    if(transaction > 0) {
+        console.log(`Вы пополнили счёт на ${transaction} eur`);
+        console.log(`Index ${index} of array ${array}`);
+    } else {
+       // console.log(`С вашего счёта списано ${transaction} eur`);
+        console.log(`С вашего счёта списано ${Math.abs(transaction)} eur`);
+    }
+})
